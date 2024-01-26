@@ -1,0 +1,53 @@
+ //cv.threshold(edges, edges, 150, 150, cv.THRESH_BINARY);
+        //cv.Canny(imgGray, edges2, 100, 100);
+        // const desiredSize_edges = new cv.Size(230, 250); // Kích thước mong muốn
+        // const desiredSize_edges_clone = new cv.Mat();
+        // cv.resize(edges, desiredSize_edges_clone, desiredSize_edges, 0, 0, cv.INTER_LINEAR);
+
+        //Lấy ra vật trong ảnh loại bỏ các phần thừa
+
+        // const contours = new cv.MatVector();
+        // const hierarchy = new cv.Mat();
+        // cv.findContours(edges, contours, hierarchy, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE);
+
+        // // Tìm đường viền lớn nhất
+        // let largestContourIndex = -1;
+        // let largestContourArea = 0;
+        // for (let i = 0; i < contours.size(); i++) {
+        //     const contour = contours.get(i);
+        //     const contourArea = cv.contourArea(contour);
+        //     if (contourArea > largestContourArea) {
+        //         largestContourArea = contourArea;
+        //         largestContourIndex = i;
+        //     }
+        // }
+        // const largestContour = contours.get(largestContourIndex);
+        // const rect = cv.boundingRect(largestContour);
+
+        // // Cắt ảnh chỉ lấy lại vật thể
+        // const objectImage = edges.roi(rect);
+
+        // const desiredSize_edges = new cv.Size(230, 250); // Kích thước mong muốn
+        // const desiredSize_edges_clone = new cv.Mat();
+        // cv.resize(objectImage, desiredSize_edges_clone, desiredSize_edges, 0, 0, cv.INTER_LINEAR);
+
+        // const desiredWidth = 230;
+        // const desiredHeight = 200;
+
+        // // Chuẩn hóa kích thước của các phần vật thể
+        // const resizedObjectImage = new cv.Mat();
+        // const objectImageSize = objectImage.size();
+        // const scaleX = desiredWidth / objectImageSize.width;
+        // const scaleY = desiredHeight / objectImageSize.height;
+        // const M = cv.matFromArray(2, 3, cv.CV_32F, [scaleX, 0, 0, 0, scaleY, 0]);
+        // cv.warpAffine(objectImage, resizedObjectImage, M, new cv.Size(desiredWidth, desiredHeight));
+
+        // Hiển thị ảnh chỉ lấy lại vật thể
+        //cv.imshow('objectCanvas', objectImage);
+
+
+          //Xử lý nhiễu
+        // const blurred = new cv.Mat();
+        // const ksize = new cv.Size(3, 3);
+        // const sigmaX = 0;
+        // cv.GaussianBlur(imgGray, blurred, ksize, sigmaX);

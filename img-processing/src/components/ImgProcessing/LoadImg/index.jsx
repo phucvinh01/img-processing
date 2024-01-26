@@ -13,7 +13,7 @@ const ImageUploader = (props) => {
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
     return (
-        <div {...getRootProps()} className={`dropzone w-100 h-[300px] flex items-center justify-center p-10 border rounded-3xl border-cyan-300 m-10 ${isDragActive ? 'active' : ''}`}>
+        <div {...getRootProps()} className={`w-100 h-[300px] flex items-center justify-center p-10 border rounded-3xl border-cyan-300 m-10 ${isDragActive ? 'active' : ''}`}>
             <input {...getInputProps()} accept="image/*" multiple />
             {isDragActive ? (
                 <p className='text-2xl font-semibold cursor-pointer hover:scale-x-105 transition-all'>Kéo và thả các file hình ảnh vào đây...</p>
